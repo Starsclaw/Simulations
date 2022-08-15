@@ -1,0 +1,7 @@
+annotation=ax.annotate(text='',xy=(0,0),xytext=(15,15),textcoords='offset points',bbox={'boxstyle':'round','fc':'w'},arrowprops={'arrowstyle':'->'})
+annotation.set_visible(False)
+def motion_hover(event):
+    annotation.get_visible()
+    if event.inaxes ==ax:
+        print('y')
+    fig.canvas.mpl_connect('motion_notify_event',motion_hover())
